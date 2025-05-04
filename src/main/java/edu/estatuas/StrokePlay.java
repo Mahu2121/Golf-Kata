@@ -9,13 +9,14 @@ public class StrokePlay implements GolfPlay {
     public void scoring(ScoreCard scoreCard){
         ArrayList<Player> players = scoreCard.getPlayers();
         for (Player player : players) {
-            int points = 0;
+            int total = 0;
             if (player != null) {
                 byte[] strokes = scoreCard.getPlayerCourse(player);
-                for (int i = 0; i < strokes.length; i++) {
-                    points += strokes[i];
+                for (byte stroke : strokes) {
+                    total += stroke;
                 }
-                player.setScore(points);
+
+                player.setScore(total);
             }
         }
     }
