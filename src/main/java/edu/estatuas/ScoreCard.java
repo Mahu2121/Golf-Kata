@@ -1,6 +1,7 @@
 package edu.estatuas;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ScoreCard {
     private Player playerA;
@@ -9,9 +10,11 @@ public class ScoreCard {
     private Player playerD = null;
     private ArrayList<Player> players;
     private Course playersCourse;
+    private List<Hole> holes;
 
     ScoreCard() {
         players = new ArrayList<>();
+        holes = new ArrayList<>();
         players.add(playerC);
         players.add(playerD);
     }
@@ -45,5 +48,22 @@ public class ScoreCard {
     public byte[] getPlayerCourse(Player player) {
         return playersCourse.getPlayerCourse(player);
     }
+
+    public void addHoles(Byte[] holes) {
+        for (int i = 0; i < holes.length; i++) {
+            Hole hole = new Hole((byte)(i + 1), holes[i]);
+            this.holes.add(hole);
+        }
+    }
+
+    public int getNumHoles() {
+        return holes.size();
+    }
+
+    public List<Hole> getHoles() {
+        return holes;
+    }
+
+
 
 }
