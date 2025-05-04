@@ -110,7 +110,7 @@ public class Golf {
          * Muestra por CLI iniciales, strokes y stableford points (0)
          * de cada jugador.
          */
-/*
+
         System.out.println("\n\t ##### STROKE PLAY #####");
         System.out.println(playerA);
         System.out.println("\nCourse A:\s" + Arrays.toString(scoreCard.getPlayerCourse(playerA)));
