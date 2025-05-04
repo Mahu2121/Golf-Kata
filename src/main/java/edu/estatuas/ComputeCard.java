@@ -3,7 +3,7 @@ package edu.estatuas;
 public class ComputeCard {
 
     private ScoreCard scoreCard;
-    GolfPlay golfPlay;
+    private GolfPlay golfPlay;
 
     ComputeCard(ScoreCard scoreCard, GolfPlay golfPlay) {
         this.scoreCard = scoreCard;
@@ -12,7 +12,6 @@ public class ComputeCard {
 
 
     public void compute(){
-
-
+        this.golfPlay.scoring(scoreCard);
     }
 }
