@@ -5,6 +5,7 @@ package edu.estatuas;
 
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Examen de Programación: Sistema de Puntuación de Golf
@@ -151,7 +152,7 @@ public class Golf {
          *
          * En este sistema, gana el jugador que sume mas puntos.
          */
-         /*
+
         System.out.println("\n\t ##### STABLEFORD SYSTEM #####");
         System.out.println("\nBirdie: " + StablefordSystem.BIRDIE.getPoints()); // 2
         System.out.println("Eagle: " + StablefordSystem.BOGEY.getPoints());  // -1
@@ -168,7 +169,7 @@ public class Golf {
          * y calcula los puntos de cada jugador.
          * Toda la lógica se encuentra en la clase Stableford.
          */
-         /*
+
         GolfPlay stablefordPlay = new Stableford();
         ComputeCard computeStableford = new ComputeCard(scoreCard, stablefordPlay);
         computeStableford.compute();
@@ -176,7 +177,7 @@ public class Golf {
          * Muestra en CLI los puntos totales
          * de los jugadores A y B
          */
-         /*
+
         System.out.println("\n\t ##### STABLEFORD POINTS  #####");
         System.out.println(playerA); // points: 0
         System.out.println(playerB); // points: -2

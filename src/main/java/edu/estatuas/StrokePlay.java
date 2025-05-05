@@ -15,7 +15,6 @@ public class StrokePlay implements GolfPlay {
                 for (byte stroke : strokes) {
                     total += stroke;
                 }
-
                 player.setScore(total);
             }
         }
