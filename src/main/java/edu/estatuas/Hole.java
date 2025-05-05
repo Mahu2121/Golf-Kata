@@ -19,7 +19,7 @@ public class Hole {
 
     @Override
     public String toString() {
-        return "\s\s\s" + this.number + " - " + getPar();
+        return "\s\s\s" + getNumber() + " - " + getPar();
     }
 
 }
