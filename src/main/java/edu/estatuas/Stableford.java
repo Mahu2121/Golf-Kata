@@ -13,23 +13,23 @@ public class Stableford implements GolfPlay{
             int points = 0;
             if (player != null) {
                 byte[] strokes = scoreCard.getPlayerCourse(player);
-                for (byte stroke : strokes) {
-                    if (stroke == StablefordSystem.DOUBLE_BOGEY.getStrokes()) {
+                for (int i = 0; i < strokes.length; i++) {
+                    if (strokes[i] >= scoreCard.getHole(i).getPar() + StablefordSystem.DOUBLE_BOGEY.getStrokes()) {
                         points += StablefordSystem.DOUBLE_BOGEY.getPoints();
                     }
-                    if (stroke == StablefordSystem.BOGEY.getStrokes()){
+                    if (strokes[i] == scoreCard.getHole(i).getPar() + StablefordSystem.BOGEY.getStrokes()) {
                         points += StablefordSystem.BOGEY.getPoints();
                     }
-                    if (stroke == StablefordSystem.PAR.getStrokes()){
+                    if (strokes[i] ==scoreCard.getHole(i).getPar()){
                         points += StablefordSystem.PAR.getPoints();
                     }
-                    if (stroke == StablefordSystem.BIRDIE.getStrokes()){
+                    if (strokes[i] == scoreCard.getHole(i).getPar() + StablefordSystem.BIRDIE.getStrokes()){
                         points += StablefordSystem.BIRDIE.getPoints();
                     }
-                    if (stroke == StablefordSystem.EAGLE.getStrokes()){
+                    if (strokes[i] == scoreCard.getHole(i).getPar() + StablefordSystem.EAGLE.getStrokes()){
                         points += StablefordSystem.EAGLE.getPoints();
                     }
-                    if (stroke == StablefordSystem.ALBATROSS.getStrokes())
+                    if (strokes[i] <= scoreCard.getHole(i).getPar() + StablefordSystem.ALBATROSS.getStrokes())
                         points += StablefordSystem.ALBATROSS.getPoints();
                 } player.setPoints(points);
             }
