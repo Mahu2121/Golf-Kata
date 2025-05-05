@@ -185,7 +185,7 @@ public class Golf {
         /*
          * Crea el jugador C y añadelo a la tarjeta.
          */
-/*
+
         Byte[] coursePlayerC = {2, 2, 2, 4, 5, 6, 7, 3, 5, 5, 4, 4, 3, 4, 4, 3, 4, 4}; // 71 strokes, 8 points
         Player playerC = new Player("Meeseeks", (byte) 0);
         scoreCard.setPlayerC(playerC);
@@ -193,7 +193,7 @@ public class Golf {
         /* Añade su recorrido a Course.
          * Reutiliza la clase Course.
          */
-         /*
+
         augusta.addPlayerCourse(playerC, coursePlayerC);
 
         /*
@@ -201,13 +201,13 @@ public class Golf {
          * y sus puntos según la modalidad Stableford.
          * Muestra el jugador por consola.
          */
-         /*
+
         computeStrokePlay.compute();
         computeStableford.compute();
 
         System.out.println(playerC); // total points: 8
 
-          */
+
     }
 
 }

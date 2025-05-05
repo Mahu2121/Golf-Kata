@@ -35,6 +35,7 @@ public class ScoreCard {
 
     public void setPlayerC(Player playerC) {
         this.playerC = playerC;
+        players.add(playerC);
     }
 
     public void setPlayerD(Player playerD) {
