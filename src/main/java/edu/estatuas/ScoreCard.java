@@ -64,6 +64,10 @@ public class ScoreCard {
         return holes;
     }
 
+    public Hole getHole(int i) {
+        return holes.get(i);
+    }
+
 
 
 }
